@@ -24,7 +24,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         layout()
-        configureLabel(with: .swift)
+        configureLabel(with: .objC)
     }
 
 }
@@ -67,6 +67,8 @@ private extension ViewController {
         (backgroundColor, titleText) = switch type {
         case .swift:
             (.systemOrange, SwiftModel.text)
+        case .objC:
+            (.systemBrown, ObjectiveCModel.getText())
         }
     }
 
@@ -77,5 +79,6 @@ private extension ViewController {
 enum ModelType {
 
     case swift
+    case objC
 
 }
