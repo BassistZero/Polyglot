@@ -12,7 +12,7 @@
 		025A2CD32B6D2CBF00C5E1B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CD22B6D2CBF00C5E1B8 /* ViewController.swift */; };
 		025A2CE32B6D2FE700C5E1B8 /* SwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CE22B6D2FE700C5E1B8 /* SwiftModel.swift */; };
 		025A2CE72B6D34A500C5E1B8 /* ObjectiveCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CE62B6D34A500C5E1B8 /* ObjectiveCModel.m */; };
-		025A2CEF2B6D3B5000C5E1B8 /* CModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CEE2B6D3B5000C5E1B8 /* CModel.c */; };
+		025A2CEF2B6D3B5000C5E1B8 /* CModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CEE2B6D3B5000C5E1B8 /* CModel.c */; settings = {COMPILER_FLAGS = "-x c++"; }; };
 		02B27A932B6FBCA800FDFADE /* CXXModelWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A922B6FBCA800FDFADE /* CXXModelWrapper.mm */; };
 		02B27A992B6FBF3800FDFADE /* CXXModel.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A972B6FBF3800FDFADE /* CXXModel.cxx */; };
 		02B27A9E2B6FC1CC00FDFADE /* CXXAdditionalModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A9C2B6FC1CC00FDFADE /* CXXAdditionalModel.cpp */; };
