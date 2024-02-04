@@ -26,7 +26,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         layout()
-        configureLabel(with: .objCXX)
+        configureLabel(with: .cxx)
     }
 
 }
@@ -77,6 +77,8 @@ private extension ViewController {
             (.systemBlue, String(cString: getCText()))
         case .objCXX:
             (.systemPurple, CXXModelWrapper.getText())
+        case .cxx:
+            (.systemMint, String(CXXModel.getText()))
         }
     }
 
@@ -90,5 +92,6 @@ enum ModelType {
     case objC
     case c
     case objCXX
+    case cxx
 
 }
