@@ -17,6 +17,8 @@
 		02B27A992B6FBF3800FDFADE /* CXXModel.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A972B6FBF3800FDFADE /* CXXModel.cxx */; };
 		02B27A9E2B6FC1CC00FDFADE /* CXXAdditionalModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A9C2B6FC1CC00FDFADE /* CXXAdditionalModel.cpp */; };
 		02B27AA02B6FCC6200FDFADE /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A9F2B6FCC6200FDFADE /* LanguageCell.swift */; };
+		02B27AA92B70071000FDFADE /* JSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27AA82B70071000FDFADE /* JSModel.swift */; };
+		02B27AAB2B700A2300FDFADE /* jsGreeting.js in Sources */ = {isa = PBXBuildFile; fileRef = 02B27AAA2B700A2300FDFADE /* jsGreeting.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		02B27A9C2B6FC1CC00FDFADE /* CXXAdditionalModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CXXAdditionalModel.cpp; sourceTree = "<group>"; };
 		02B27A9D2B6FC1CC00FDFADE /* CXXAdditionalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXAdditionalModel.h; sourceTree = "<group>"; };
 		02B27A9F2B6FCC6200FDFADE /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		02B27AA82B70071000FDFADE /* JSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSModel.swift; sourceTree = "<group>"; };
+		02B27AAA2B700A2300FDFADE /* jsGreeting.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jsGreeting.js; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		025A2CE52B6D32CC00C5E1B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02B27AA72B7006F400FDFADE /* JS */,
 				02B27A8A2B6FB3E700FDFADE /* CXX */,
 				025A2CEC2B6D3B3800C5E1B8 /* C */,
 				025A2CEA2B6D399700C5E1B8 /* ObjectiveC */,
@@ -153,6 +158,15 @@
 				02B27A9D2B6FC1CC00FDFADE /* CXXAdditionalModel.h */,
 			);
 			path = Additional;
+			sourceTree = "<group>";
+		};
+		02B27AA72B7006F400FDFADE /* JS */ = {
+			isa = PBXGroup;
+			children = (
+				02B27AA82B70071000FDFADE /* JSModel.swift */,
+				02B27AAA2B700A2300FDFADE /* jsGreeting.js */,
+			);
+			path = JS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,8 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				025A2CD32B6D2CBF00C5E1B8 /* ViewController.swift in Sources */,
+				02B27AAB2B700A2300FDFADE /* jsGreeting.js in Sources */,
 				02B27A992B6FBF3800FDFADE /* CXXModel.cxx in Sources */,
 				02B27A932B6FBCA800FDFADE /* CXXModelWrapper.mm in Sources */,
+				02B27AA92B70071000FDFADE /* JSModel.swift in Sources */,
 				02B27AA02B6FCC6200FDFADE /* LanguageCell.swift in Sources */,
 				025A2CE72B6D34A500C5E1B8 /* ObjectiveCModel.m in Sources */,
 				025A2CE32B6D2FE700C5E1B8 /* SwiftModel.swift in Sources */,
