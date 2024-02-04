@@ -12,6 +12,7 @@
 		025A2CD32B6D2CBF00C5E1B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CD22B6D2CBF00C5E1B8 /* ViewController.swift */; };
 		025A2CE32B6D2FE700C5E1B8 /* SwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CE22B6D2FE700C5E1B8 /* SwiftModel.swift */; };
 		025A2CE72B6D34A500C5E1B8 /* ObjectiveCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CE62B6D34A500C5E1B8 /* ObjectiveCModel.m */; };
+		025A2CEF2B6D3B5000C5E1B8 /* CModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 025A2CEE2B6D3B5000C5E1B8 /* CModel.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		025A2CE62B6D34A500C5E1B8 /* ObjectiveCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCModel.m; sourceTree = "<group>"; };
 		025A2CE82B6D37A900C5E1B8 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		025A2CE92B6D385200C5E1B8 /* ObjectiveCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCModel.h; sourceTree = "<group>"; };
+		025A2CED2B6D3B4400C5E1B8 /* CModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CModel.h; sourceTree = "<group>"; };
+		025A2CEE2B6D3B5000C5E1B8 /* CModel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CModel.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 		025A2CE52B6D32CC00C5E1B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				025A2CEC2B6D3B3800C5E1B8 /* C */,
 				025A2CEA2B6D399700C5E1B8 /* ObjectiveC */,
 				025A2CE22B6D2FE700C5E1B8 /* SwiftModel.swift */,
 			);
@@ -90,6 +94,15 @@
 				025A2CE62B6D34A500C5E1B8 /* ObjectiveCModel.m */,
 			);
 			path = ObjectiveC;
+			sourceTree = "<group>";
+		};
+		025A2CEC2B6D3B3800C5E1B8 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				025A2CED2B6D3B4400C5E1B8 /* CModel.h */,
+				025A2CEE2B6D3B5000C5E1B8 /* CModel.c */,
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +179,7 @@
 				025A2CE32B6D2FE700C5E1B8 /* SwiftModel.swift in Sources */,
 				025A2CCF2B6D2CBF00C5E1B8 /* AppDelegate.swift in Sources */,
 				025A2CD12B6D2CBF00C5E1B8 /* SceneDelegate.swift in Sources */,
+				025A2CEF2B6D3B5000C5E1B8 /* CModel.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
