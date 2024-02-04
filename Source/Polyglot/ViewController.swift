@@ -11,13 +11,22 @@ final class ViewController: UIViewController {
 
     // MARK: - Private Views
 
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .largeTitle)
-        return label
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        tableView.register(LanguageCell.self, forCellReuseIdentifier: "\(LanguageCell.self)")
+
+        return tableView
     }()
 
     // MARK: - Life-Cycle
@@ -26,7 +35,6 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         layout()
-        configureLabel(with: .cxx)
     }
 
 }
@@ -41,34 +49,38 @@ private extension ViewController {
     }
 
     func addSubviews() {
-        view.addSubview(titleLabel)
+        view.addSubview(tableView)
     }
 
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.TableView.leadingSpacing),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Constants.TableView.trailingSpacing)
         ])
     }
 
 }
 
-// MARK: - Configuration
+// MARK: - Module
 
-private extension ViewController {
+typealias Module = (backgroundColor: UIColor, titleText: String)
 
-    func configureLabel(with type: ModelType) {
-        let backgroundColor: UIColor
-        let titleText: String
+// MARK: - ModelType
 
-        defer {
-            view.backgroundColor = backgroundColor
-            titleLabel.text = titleText
-        }
+enum ModelType: Int, CaseIterable {
 
-        (backgroundColor, titleText) = switch type {
+    case swift
+    case objC
+    case c
+    case objCXX
+    case cxx
+
+    // MARK: - Public Properties
+
+    var info: Module {
+        switch self {
         case .swift:
             (.systemOrange, SwiftModel.text)
         case .objC:
@@ -84,14 +96,97 @@ private extension ViewController {
 
 }
 
-// MARK: - ModelType
+// MARK: - UITableViewDelegate
 
-enum ModelType {
+extension ViewController: UITableViewDelegate {
 
-    case swift
-    case objC
-    case c
-    case objCXX
-    case cxx
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        configureSpacingCell(for: tableView, at: section)
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        configureFooter(for: tableView, at: section)
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        Constants.TableView.cellVerticalSpacing
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        Constants.TableView.footerHeight
+    }
+
+}
+
+// MARK: - UITableViewDataSource
+
+extension ViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        ModelType.allCases.count
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        Constants.TableView.numberOfRowsInSection
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        configureCell(for: tableView, at: indexPath)
+    }
+
+}
+
+// MARK: - Private Methods
+
+private extension ViewController {
+
+    func configureCell(for tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(LanguageCell.self)", for: indexPath) as? LanguageCell else {
+            return .init()
+        }
+
+        cell.title = ModelType.init(rawValue: indexPath.section)?.info.titleText
+        cell.color = ModelType.init(rawValue: indexPath.section)?.info.backgroundColor
+
+        return cell
+    }
+
+    func configureSpacingCell(for tableView: UITableView, at section: Int) -> UIView? {
+        guard section != Constants.TableView.firstSection else {
+            return nil
+        }
+
+        let view = UIView()
+        return view
+    }
+
+    func configureFooter(for tableView: UITableView, at section: Int) -> UIView? {
+        guard section != Constants.TableView.lastSection else {
+            return nil
+        }
+
+        let view = UIView()
+        return view
+    }
+
+}
+
+// MARK: - Constants
+
+private extension ViewController {
+
+    enum Constants {
+
+        enum TableView {
+            static let cellVerticalSpacing: CGFloat = 16
+            static let leadingSpacing: CGFloat = 16
+            static let trailingSpacing: CGFloat = -16
+            static let footerHeight: CGFloat = 0
+            static let numberOfRowsInSection = 1
+            static let firstSection = 0
+            static let lastSection = ModelType.allCases.count - 1
+        }
+
+    }
 
 }

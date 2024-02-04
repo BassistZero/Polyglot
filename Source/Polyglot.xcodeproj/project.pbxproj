@@ -16,6 +16,7 @@
 		02B27A932B6FBCA800FDFADE /* CXXModelWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A922B6FBCA800FDFADE /* CXXModelWrapper.mm */; };
 		02B27A992B6FBF3800FDFADE /* CXXModel.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A972B6FBF3800FDFADE /* CXXModel.cxx */; };
 		02B27A9E2B6FC1CC00FDFADE /* CXXAdditionalModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A9C2B6FC1CC00FDFADE /* CXXAdditionalModel.cpp */; };
+		02B27AA02B6FCC6200FDFADE /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A9F2B6FCC6200FDFADE /* LanguageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		02B27A982B6FBF3800FDFADE /* CXXModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXModel.h; sourceTree = "<group>"; };
 		02B27A9C2B6FC1CC00FDFADE /* CXXAdditionalModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CXXAdditionalModel.cpp; sourceTree = "<group>"; };
 		02B27A9D2B6FC1CC00FDFADE /* CXXAdditionalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXAdditionalModel.h; sourceTree = "<group>"; };
+		02B27A9F2B6FCC6200FDFADE /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				025A2CE42B6D323400C5E1B8 /* Supporting Files */,
 				025A2CE52B6D32CC00C5E1B8 /* Models */,
 				025A2CD22B6D2CBF00C5E1B8 /* ViewController.swift */,
+				02B27A9F2B6FCC6200FDFADE /* LanguageCell.swift */,
 			);
 			path = Polyglot;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				025A2CD32B6D2CBF00C5E1B8 /* ViewController.swift in Sources */,
 				02B27A992B6FBF3800FDFADE /* CXXModel.cxx in Sources */,
 				02B27A932B6FBCA800FDFADE /* CXXModelWrapper.mm in Sources */,
+				02B27AA02B6FCC6200FDFADE /* LanguageCell.swift in Sources */,
 				025A2CE72B6D34A500C5E1B8 /* ObjectiveCModel.m in Sources */,
 				025A2CE32B6D2FE700C5E1B8 /* SwiftModel.swift in Sources */,
 				025A2CCF2B6D2CBF00C5E1B8 /* AppDelegate.swift in Sources */,
@@ -367,7 +371,7 @@
 				INFOPLIST_FILE = "Polyglot/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,7 +405,7 @@
 				INFOPLIST_FILE = "Polyglot/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
