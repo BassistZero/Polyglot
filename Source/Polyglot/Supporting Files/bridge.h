@@ -7,3 +7,4 @@
 
 #import "ObjectiveCModel.h"
 #import "CModel.h"
+#import "CXXModelWrapper.h"
