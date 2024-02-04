@@ -6,6 +6,7 @@
 //
 
 #include <string>
+#include "CXXAdditionalModel.h"
 
 class CXXModel {
 public:

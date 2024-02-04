@@ -9,5 +9,6 @@
 
 std::string CXXModel::getText() {
     std::string baseText = "Hi from C++!";
-    return baseText;
+    std::string additionalText = CXXAdditionalModel().getAdditionalText();
+    return baseText + " " + additionalText;
 }
