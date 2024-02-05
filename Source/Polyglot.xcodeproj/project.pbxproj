@@ -19,6 +19,7 @@
 		02B27AA02B6FCC6200FDFADE /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27A9F2B6FCC6200FDFADE /* LanguageCell.swift */; };
 		02B27AA92B70071000FDFADE /* JSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27AA82B70071000FDFADE /* JSModel.swift */; };
 		02B27AAB2B700A2300FDFADE /* jsGreeting.js in Sources */ = {isa = PBXBuildFile; fileRef = 02B27AAA2B700A2300FDFADE /* jsGreeting.js */; };
+		02B27AB12B70260600FDFADE /* LuaWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B27AB02B70260600FDFADE /* LuaWrapper.m */; };
 		02B27B042B70268500FDFADE /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 02B27AB72B70268500FDFADE /* Makefile */; };
 		02B27B052B70268500FDFADE /* README in Resources */ = {isa = PBXBuildFile; fileRef = 02B27AB82B70268500FDFADE /* README */; };
 		02B27B062B70268500FDFADE /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 02B27ABA2B70268500FDFADE /* logo.gif */; };
@@ -63,6 +64,7 @@
 		02B27B302B70268500FDFADE /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = 02B27AFE2B70268500FDFADE /* llex.c */; };
 		02B27B312B70268500FDFADE /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 02B27B002B70268500FDFADE /* ltm.c */; };
 		02B27B322B70268500FDFADE /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 02B27B022B70268500FDFADE /* ldo.c */; };
+		02B27B352B70B2A500FDFADE /* getLuaText.lua in Resources */ = {isa = PBXBuildFile; fileRef = 02B27B342B70B2A500FDFADE /* getLuaText.lua */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		02B27A9F2B6FCC6200FDFADE /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		02B27AA82B70071000FDFADE /* JSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSModel.swift; sourceTree = "<group>"; };
 		02B27AAA2B700A2300FDFADE /* jsGreeting.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jsGreeting.js; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		02B27AB02B70260600FDFADE /* LuaWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuaWrapper.m; sourceTree = "<group>"; };
+		02B27AB22B70261100FDFADE /* LuaWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LuaWrapper.h; sourceTree = "<group>"; };
 		02B27AB72B70268500FDFADE /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		02B27AB82B70268500FDFADE /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		02B27ABA2B70268500FDFADE /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logo.gif; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		02B27B012B70268500FDFADE /* lctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lctype.h; sourceTree = "<group>"; };
 		02B27B022B70268500FDFADE /* ldo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldo.c; sourceTree = "<group>"; };
 		02B27B032B70268500FDFADE /* lundump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lundump.h; sourceTree = "<group>"; };
+		02B27B342B70B2A500FDFADE /* getLuaText.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = getLuaText.lua; path = Polyglot/Models/Lua/getLuaText.lua; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,8 +298,19 @@
 			isa = PBXGroup;
 			children = (
 				02B27AB62B70268500FDFADE /* Source */,
+				02B27AAF2B7025F200FDFADE /* Wrapper */,
+				02B27B342B70B2A500FDFADE /* getLuaText.lua */,
 			);
 			path = Lua;
+			sourceTree = "<group>";
+		};
+		02B27AAF2B7025F200FDFADE /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				02B27AB02B70260600FDFADE /* LuaWrapper.m */,
+				02B27AB22B70261100FDFADE /* LuaWrapper.h */,
+			);
+			path = Wrapper;
 			sourceTree = "<group>";
 		};
 		02B27AB62B70268500FDFADE /* Source */ = {
@@ -459,6 +475,7 @@
 				02B27B092B70268500FDFADE /* index.css in Resources */,
 				02B27B0F2B70268500FDFADE /* osi-certified-72x60.png in Resources */,
 				02B27B052B70268500FDFADE /* README in Resources */,
+				02B27B352B70B2A500FDFADE /* getLuaText.lua in Resources */,
 				02B27B082B70268500FDFADE /* contents.html in Resources */,
 				02B27B0D2B70268500FDFADE /* manual.css in Resources */,
 				02B27B0B2B70268500FDFADE /* manual.html in Resources */,
@@ -499,6 +516,7 @@
 				02B27AA92B70071000FDFADE /* JSModel.swift in Sources */,
 				02B27B2A2B70268500FDFADE /* lcode.c in Sources */,
 				02B27B292B70268500FDFADE /* lcorolib.c in Sources */,
+				02B27AB12B70260600FDFADE /* LuaWrapper.m in Sources */,
 				02B27AA02B6FCC6200FDFADE /* LanguageCell.swift in Sources */,
 				02B27B2D2B70268500FDFADE /* lbaselib.c in Sources */,
 				02B27B122B70268500FDFADE /* lopcodes.c in Sources */,

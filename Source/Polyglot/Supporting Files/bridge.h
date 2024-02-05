@@ -9,3 +9,4 @@
 #import "CModel.h"
 #import "CXXModelWrapper.h"
 #import "CXXModel.h"
+#import "LuaWrapper.h"

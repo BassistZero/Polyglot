@@ -77,6 +77,7 @@ enum ModelType: Int, CaseIterable {
     case objCXX
     case cxx
     case js
+    case lua
 
     // MARK: - Public Properties
 
@@ -94,6 +95,8 @@ enum ModelType: Int, CaseIterable {
             (.systemMint, String(CXXModel.getText()))
         case .js:
             (.systemYellow, JSModel().getText())
+        case .lua:
+            (.systemTeal, LuaWrapper().getLuaText())
         }
     }
 
