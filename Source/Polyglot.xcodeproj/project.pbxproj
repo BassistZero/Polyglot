@@ -65,6 +65,8 @@
 		02B27B312B70268500FDFADE /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 02B27B002B70268500FDFADE /* ltm.c */; };
 		02B27B322B70268500FDFADE /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 02B27B022B70268500FDFADE /* ldo.c */; };
 		02B27B352B70B2A500FDFADE /* getLuaText.lua in Resources */ = {isa = PBXBuildFile; fileRef = 02B27B342B70B2A500FDFADE /* getLuaText.lua */; };
+		02B483762B70DA8A0002ADE8 /* BrainfuckInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B483752B70DA8A0002ADE8 /* BrainfuckInterpreter.swift */; };
+		02B483782B70DCAF0002ADE8 /* BrainfuckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B483772B70DCAF0002ADE8 /* BrainfuckModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +168,8 @@
 		02B27B022B70268500FDFADE /* ldo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ldo.c; sourceTree = "<group>"; };
 		02B27B032B70268500FDFADE /* lundump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lundump.h; sourceTree = "<group>"; };
 		02B27B342B70B2A500FDFADE /* getLuaText.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = getLuaText.lua; path = Polyglot/Models/Lua/getLuaText.lua; sourceTree = SOURCE_ROOT; };
+		02B483752B70DA8A0002ADE8 /* BrainfuckInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainfuckInterpreter.swift; sourceTree = "<group>"; };
+		02B483772B70DCAF0002ADE8 /* BrainfuckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainfuckModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,7 @@
 		025A2CE52B6D32CC00C5E1B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02B483742B70DA7E0002ADE8 /* Brainfuck */,
 				02B27AAC2B70254700FDFADE /* Lua */,
 				02B27AA72B7006F400FDFADE /* JS */,
 				02B27A8A2B6FB3E700FDFADE /* CXX */,
@@ -246,6 +251,14 @@
 				025A2CEE2B6D3B5000C5E1B8 /* CModel.c */,
 			);
 			path = C;
+			sourceTree = "<group>";
+		};
+		02675C762B70EE7C00CDC096 /* Interpreter */ = {
+			isa = PBXGroup;
+			children = (
+				02B483752B70DA8A0002ADE8 /* BrainfuckInterpreter.swift */,
+			);
+			path = Interpreter;
 			sourceTree = "<group>";
 		};
 		02B27A8A2B6FB3E700FDFADE /* CXX */ = {
@@ -411,6 +424,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		02B483742B70DA7E0002ADE8 /* Brainfuck */ = {
+			isa = PBXGroup;
+			children = (
+				02675C762B70EE7C00CDC096 /* Interpreter */,
+				02B483772B70DCAF0002ADE8 /* BrainfuckModel.swift */,
+			);
+			path = Brainfuck;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,6 +519,7 @@
 				02B27B042B70268500FDFADE /* Makefile in Sources */,
 				02B27B192B70268500FDFADE /* lstrlib.c in Sources */,
 				025A2CD32B6D2CBF00C5E1B8 /* ViewController.swift in Sources */,
+				02B483782B70DCAF0002ADE8 /* BrainfuckModel.swift in Sources */,
 				02B27AAB2B700A2300FDFADE /* jsGreeting.js in Sources */,
 				02B27B312B70268500FDFADE /* ltm.c in Sources */,
 				02B27B222B70268500FDFADE /* ldump.c in Sources */,
@@ -536,6 +559,7 @@
 				02B27B1F2B70268500FDFADE /* lctype.c in Sources */,
 				02B27B132B70268500FDFADE /* lstate.c in Sources */,
 				02B27B252B70268500FDFADE /* lzio.c in Sources */,
+				02B483762B70DA8A0002ADE8 /* BrainfuckInterpreter.swift in Sources */,
 				025A2CD12B6D2CBF00C5E1B8 /* SceneDelegate.swift in Sources */,
 				025A2CEF2B6D3B5000C5E1B8 /* CModel.c in Sources */,
 			);
