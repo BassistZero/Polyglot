@@ -28,7 +28,7 @@ LUAMOD_API int luaopen_os (lua_State *L) {
     const char* strResult = lua_tostring(luaState, -1);
     lua_pop(luaState, 1);
 
-    NSString* resultString = [NSString stringWithUTF8String: strResult];
+    NSString* resultString = [NSString stringWithCString: strResult encoding: NSASCIIStringEncoding];
 
     return resultString;
 }
@@ -50,8 +50,8 @@ LUAMOD_API int luaopen_os (lua_State *L) {
     Lua* lua = [[Lua alloc] init];
     [lua setup];
 
-    NSString* luaScript = [NSString stringWithContentsOfURL: filename encoding: kCFStringEncodingUTF8 error: Nil];
-    char* ptrScript = strdup([luaScript cStringUsingEncoding: kCFStringEncodingUTF8]);
+    NSString* luaScript = [NSString stringWithContentsOfURL: filename encoding: NSASCIIStringEncoding error: Nil];
+    char* ptrScript = strdup([luaScript cStringUsingEncoding: NSASCIIStringEncoding]);
     NSString* result = [lua getLuaText: ptrScript];
 
     free(ptrScript);
